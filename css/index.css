@@ -144,9 +144,9 @@ footer {
 
 .floating-div {
     position: fixed;
-    width: 40%;;
+    width: 100%;;
     top: 0%;
-    left: 62%;
+    left: 0%;
     background-color: white;
     padding: 20px;
     border: 2px solid #ddd;
