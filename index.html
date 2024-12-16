@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Proyectos y planificaciones para el ciclo básico de la Educación Técnica">
+	<meta property="og:title" content="Punto Escuela">
+	<meta property="og:description" content="Proyectos y planificaciones para el ciclo básico de la Educación Técnica">
+	<meta property="og:image" content="https://puntoescuela.netlify.app/img/thumb/conector_m.2_0.jpg">
+	<meta property="og:url" content="https://puntoescuela.netlify.app/img/thumb/conector_m.2_0.jpg">
+	<meta property="og:type" content="website">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="./css/index.css" rel="stylesheet">
+
+	<title>Sistemas Tecnológicos</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Punto Escuela</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#present">Presentaci&oacute;n</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#proyectos">Proyectos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./html/conntenidos.html">Contenidos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./html/planificaciones.html">Planificaciones</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="./html/contacto.html">Contacto</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" onclick="toggleFloatingDiv(event)">Carrito</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="banner">
+			<div class="textoBanner">
+				<h1 class="animate__animated animate__backInDown">Sistemas Tecnol&oacute;gicos</h1>
+			</div>
+		</div>
+
+	</header>
+    <div class="backdrop" id="backdrop" onclick="toggleFloatingDiv(event)"></div>
+    <div class="floating-div" id="floatingDiv">
+		<div id="carrito">
+			<h2>Carrito de Compras</h2>
+			<ul id="lista-carrito"></ul>
+			<p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+			<p>Descuento: $<span id="descuento-carrito">0</span></p>
+			<p>IVA (21%): $<span id="iva-carrito">0</span></p>
+			<p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+			<button onclick="vaciarCarrito()">Vaciar Carrito</button>
+			<button onclick="mostrarCheckout()">Checkout</button>
+		</div>
+	
+		<!-- Modal de Checkout -->
+		<div id="checkout-modal">
+			<div class="checkout-content">
+				<h2>Finalizar Compra</h2>
+				<p>Subtotal: $<span id="modal-subtotal">0</span></p>
+				<p>Descuento: $<span id="modal-descuento">0</span></p>
+				<p>IVA: $<span id="modal-iva">0</span></p>
+				<p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+				<button onclick="realizarCompra()">Confirmar Compra</button>
+				<button onclick="cerrarCheckout()">Cancelar</button>
+			</div>
+		</div>
+        <button onclick="toggleFloatingDiv(event)">Cerrar</button>
+    </div>
+	<main>
+		<section> <!-- Sección presentación -->
+			<a name="present"></a>
+			<div class="divTexto">
+			<h3>Sobre nosotros.</h3>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga error, perferendis aut modi tenetur
+				commodi non quisquam. Fugit sunt, nemo est blanditiis necessitatibus, beatae nostrum sequi, in adipisci
+				aperiam explicabo.
+				Quae minima, ab repellendus est non quod, sed ea similique eius aut odio maiores quo possimus tempora,
+				doloremque sit! Ipsa perferendis recusandae molestias iusto sed ad blanditiis aspernatur itaque culpa!
+			</p>
+		</div>
+		</section>
+		<section> <!-- Sección Proyectos -->
+			<a name="proyectos"></a>
+			
+			<div  class="divTexto">
+			<h3>Proyectos</h3> <!-- presentacion de proyectos -->
+			<p>Se pone a disposición una serie de proyectos planificados para la aplicación en materias técnicas del
+				ciclo básico de la escuela técnica para realizar con los estudiantes, orientados a tener una
+				aproximación inicial con el mundo tecnológico, fortalecer destrezas motrices fundamentales, obtener
+				conocimientos sobre los procesos de producción, etc.</p>
+				<h4>Clickea en las im&aacute;genes para ver una descripci&oacute;n detallada</h4>
+			</div>
+			<div class="row divTexto">
+				<!--<div class="card-deck">-->
+				<div class="col-12 col-md-6 col-lg-4 mb-4">
+					<div class="card h-100">
+						<a onclick="actualizaDescripcion('paper', 0)"><img class="card-img-top"
+								src="./img/thumb/papercraft.png" alt="Papercraft"></a>
+						<div class="card-body">
+							<h5 class="card-title">Papercraft</h5>
+							<p class="card-text" id="paper">A causa de la exposición temprana de los niños a las NTICX, se ha
+								perdido gran parte de la destreza adquirida habitualmente para esa edad. Se propone
+								utilizar el papercraft con motivos llamativos a los estudiantes para practicar,
+								fortalecer y afianzar la motricidad fina, dado que es una habilidad fundamental en los y
+								las estudiantes de escuela técnica.</p>
+							<p class="card-text"><small class="text-muted">Duraci&oacute;n del proyecto: 2
+									clases.</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 mb-4">
+					<div class="card h-100">
+						<a onclick="actualizaDescripcion('autoelectrico', 1)"><img class="card-img-top"
+								src="./img/thumb/cochecito.jpg" alt="Auto electrico"></a>
+						<div class="card-body">
+							<h5 class="card-title">Auto El&eacute;ctrico</h5>
+							<p class="card-text" id="autoelectrico">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+								quasi voluptatum nobis culpa ipsum, accusantium rem est voluptates eaque, et, iste
+								excepturi iusto tempore. Mollitia, nostrum iure? Nobis, temporibus optio. Repellat
+								tenetur id dolorum architecto alias perferendis, cumque, velit, esse assumenda eius
+								ducimus?</p>
+							<p class="card-text"><small class="text-muted">Duraci&oacute;n del proyecto: 4
+									clases.</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 mb-4">
+					<div class="card h-100">
+						<a onclick="actualizaDescripcion('hardwaree', 2)"><img class="card-img-top"
+								src="./img/thumb/conector_m.2_0.jpg" alt="Introduccion al Hardware"></a>
+						<div class="card-body">
+							<h5 class="card-title">Hardware de PC</h5>
+							<p class="card-text" id="hardwaree">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+								quasi voluptatum nobis culpa ipsum, accusantium rem est voluptates eaque, et, iste
+								excepturi iusto tempore. Mollitia, nostrum iure? Nobis, temporibus optio. Repellat
+								tenetur id dolorum architecto alias perferendis, cumque, velit, esse assumenda eius
+								ducimus?</p>
+							<p class="card-text"><small class="text-muted">Duraci&oacute;n del proyecto: 2
+									clases.</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 mb-4">
+					<div class="card h-100">
+						<a onclick="actualizaDescripcion('brazohidraulico', 3)"><img class="card-img-top"
+								src="./img/thumb/brazo_hidr.jpg" alt="Brazo Hidráulico"></a>
+						<div class="card-body">
+							<h5 class="card-title">Brazo Hidráulico</h5>
+							<p class="card-text" id="brazohidraulico">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+								quasi voluptatum nobis culpa ipsum, accusantium rem est voluptates eaque, et, iste
+								excepturi iusto tempore. Mollitia, nostrum iure? Nobis, temporibus optio. Repellat
+								tenetur id dolorum architecto alias perferendis, cumque, velit, esse assumenda eius
+								ducimus?</p>
+							<p class="card-text"><small class="text-muted">Duraci&oacute;n del proyecto: 6
+									clases.</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 mb-4">
+					<div class="card h-100">
+						<a onclick="actualizaDescripcion('brazoRob', 4)"><img class="card-img-top"
+							src="./img/thumb/brazo_rob.jpg" alt="Brazo robótico"></a>
+								<div class="card-body">
+							<h5 class="card-title">Brazo robótico</h5>
+							<p class="card-text" id="brazoRob">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+								quasi voluptatum nobis culpa ipsum, accusantium rem est voluptates eaque, et, iste
+								excepturi iusto tempore. Mollitia, nostrum iure? Nobis, temporibus optio. Repellat
+								tenetur id dolorum architecto alias perferendis, cumque, velit, esse assumenda eius
+								ducimus?</p>
+							<p class="card-text"><small class="text-muted">Duraci&oacute;n del proyecto: 10
+									clases.</small></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 col-lg-4 mb-4">
+					<div class="card h-100">
+						<a onclick="actualizaDescripcion('autobrazo', 5)"><img class="card-img-top"
+								src="./img/thumb/auto_brazo.jpg" alt="Auto con brazo"></a>
+						<div class="card-body">
+							<h5 class="card-title">Auto remoto con brazo</h5>
+							<p class="card-text" id="autobrazo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+								quasi voluptatum nobis culpa ipsum, accusantium rem est voluptates eaque, et, iste
+								excepturi iusto tempore. Mollitia, nostrum iure? Nobis, temporibus optio. Repellat
+								tenetur id dolorum architecto alias perferendis, cumque, velit, esse assumenda eius
+								ducimus?</p>
+							<p class="card-text"><small class="text-muted">Duraci&oacute;n del proyecto: 14
+									clases.</small></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+	</section>
+	</main>
+	<footer>
+        <div class="subFooter"> 
+            <div class="info">
+                <h3 style="color: #f6f6f6;">Punto Escuela</h3>
+                <a href="#" class="infoFooter">Información legal</a>
+                <br>
+                <a href="#" class="infoFooter">Política de privacidad</a>
+            </div>
+            <div class="iconos">
+                <a href="https://www.instagram.com"><i class="bx bxl-instagram-alt iconoFooter"></i></a>
+                <a href="https://www.facebook.com"><i class="bx bxl-facebook-square iconoFooter"></i></a>
+                <a href="https://www.gmail.com"><i class="bx bxl-gmail iconoFooter"></i></a>
+                <a href="https://maps.google.com"><i class="bx bxs-map iconoFooter"></i></a>
+
+            </div>
+		</div>
+		<p class="copyright">Material "original" Copyright TheMeMuX @ 1990-207X</p>
+    </footer>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	crossorigin="anonymous"></script>
+	<script>
+        AOS.init();
+    </script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>
